@@ -1,0 +1,11 @@
+### cek informasi webhook saat ini
+GET  https://api.telegram.org/bot{BOT_TOKEN}/getWebhookInfo HTTP/1.1
+
+
+###  nambah/ngubah endpoint webhook
+POST https://api.telegram.org/bot{BOT_TOKEN}/setWebhook
+Content-Type: application/json
+
+{
+  "url": "https://domain.com/tele-endpoint"
+}

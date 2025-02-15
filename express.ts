@@ -1,5 +1,6 @@
 import express, { Request, Response } from "express";
 
+import bodyparser from "body-parser";
 
 const app = express()
 
@@ -7,7 +8,6 @@ const TELE_TOKEN = 'abcd'
 const TELE_URL = `https://api.telegram.org/bot${TELE_TOKEN}`;
 
 
-import bodyparser from "body-parser";
 
 app.use(bodyparser.json());
 

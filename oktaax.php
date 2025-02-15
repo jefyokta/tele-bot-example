@@ -12,7 +12,7 @@ $TELE_TOKEN = "token-example";
 $TELE_HOST = "api.telegram.org";
 $TELE_PATH = "/bot{$TELE_TOKEN}/sendMessage";
 
-$app->post("tele-endpoint", function (Request $req, Response $res) use ($TELE_HOST, $TELE_PATH) {
+$app->post("/tele-endpoint", function (Request $req, Response $res) use ($TELE_HOST, $TELE_PATH) {
     $data = json_decode($req->getBody(), true);
     $message = $data['message'] ?? [];
     $chat_id = $message['chat']['id'] ?? null;
